@@ -1,0 +1,9 @@
+{
+    "name": "vidamrr/notas",
+    "autoload": {
+        "psr-4": {
+            "Vidamrr\\Notas\\": "src/"
+        }
+    },
+    "require": {}
+}
