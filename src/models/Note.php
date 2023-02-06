@@ -21,5 +21,10 @@ class Note extends Database{
 
     //save
 
-    
+    public function save(){
+        $query = $this->connect()->prepare("INSERT INTO notes (uuid, title, content, update) VALUES(:uuid,:title,:content, NOW())");
+        $query->execute(['title' => $this->title, 'uuid' => $this->uuid, 'content' => $this->content])
+    }
+
+
 }

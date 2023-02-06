@@ -3,16 +3,23 @@
 namespace Vidamrr\Notas\lib;
 
 class Database{
+    private string $host;
+    private string $username;
+    private string $password;
+    private string $dbname;
     public function __construct()
     {
         
         // Datos de conexión
-        $host = "172.17.0.2";
-        $username = "root";
-        $password = "123";
-        $dbname = "notas";
+        $this->host = "172.17.0.2";
+        $this->username = "root";
+        $this->password = "123";
+        $this->dbname = "notas";
         // Crear conexión
-        $conn = mysqli_connect($host, $username, $password, $dbname);
+    }
+    
+    public function connect(){
+        $conn = mysqli_connect($this->host, $this->username, $this->password, $this->dbname);
         
         // Verificar conexión
         if (!$conn) {
