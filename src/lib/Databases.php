@@ -1,16 +1,24 @@
 <?php
 
-// Datos de conexión
-$host = "172.17.0.2";
-$username = "root";
-$password = "123";
-$dbname = "notas";
+namespace Vidamrr\Notas\lib;
 
-// Crear conexión
-$conn = mysqli_connect($host, $username, $password, $dbname);
+class Database{
+    public function __construct()
+    {
+        
+        // Datos de conexión
+        $host = "172.17.0.2";
+        $username = "root";
+        $password = "123";
+        $dbname = "notas";
+        // Crear conexión
+        $conn = mysqli_connect($host, $username, $password, $dbname);
+        
+        // Verificar conexión
+        if (!$conn) {
+            die("Conexión fallida: " . mysqli_connect_error());
+        }
+        echo "Conexión exitosa";
+    }
 
-// Verificar conexión
-if (!$conn) {
-    die("Conexión fallida: " . mysqli_connect_error());
 }
-echo "Conexión exitosa";
