@@ -15,7 +15,7 @@ class Database{
     {
         
         // Datos de conexión
-        $this->host = "172.17.0.2";
+        $this->host = "172.17.0.3";
         $this->username = "root";
         $this->password = "123";
         $this->dbname = "notas";

@@ -17,8 +17,13 @@
     <?php
     
     foreach($notes as $note){
-        echo "<div>{$note->getTitle()}</div>";
-        echo "<div>{$note->getContent()}</div>";
+    ?>
+    <a href="?view=views&id=<?= $note->getUUID(); ?>">
+        <div><?= $note->getTitle(); ?></div>
+    </a>
+
+    <?php
+    
     }
 
     ?>
