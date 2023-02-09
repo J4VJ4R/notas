@@ -1,5 +1,7 @@
 <?php
-// phpinfo();
+    use Vidamrr\Notas\models\Note;
+
+    $notes = Note::getAll();
 ?>
 
 <!DOCTYPE html>
@@ -12,5 +14,13 @@
 </head>
 <body>
     <h1>home</h1>
+    <?php
+    
+    foreach($notes as $note){
+        echo "<div>{$note->getTitle()}</div>";
+        echo "<div>{$note->getContent()}</div>";
+    }
+
+    ?>
 </body>
 </html>
