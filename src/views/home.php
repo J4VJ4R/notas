@@ -1,7 +1,9 @@
 <?php
+
     use Vidamrr\Notas\models\Note;
 
     $notes = Note::getAll();
+    
 ?>
 
 <!DOCTYPE html>

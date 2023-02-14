@@ -8,15 +8,19 @@ use Vidamrr\Notas\lib\Database;
 class Note extends Database{
 
     private string $uuid;
-
+    private string $title;
+    private string $content;
     public function __construct(
-        private string $title,
-        private string $content
+        string $title,
+        string $content
     )
     {
         parent::__construct();
 
         $this->uuid = uniqid();
+        $this->title = $title;
+        $this->content = $content;
+
     }
 
     //save

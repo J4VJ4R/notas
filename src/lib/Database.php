@@ -39,16 +39,6 @@ class Database{
             throw $th;
         }
 
-
-
-
-        // $conn = mysqli_connect($this->host, $this->username, $this->password, $this->dbname);
-        
-        // // Verificar conexión
-        // if (!$conn) {
-        //     die("Conexión fallida: " . mysqli_connect_error());
-        // }
-        // echo "Conexión exitosa";
     }
 
 }

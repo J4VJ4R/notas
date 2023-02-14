@@ -5,6 +5,7 @@ use Vidamrr\Notas\models\Note;
 if(count($_POST) > 0){
     $title = $_POST['title'];
     $content = $_POST['content'];
+    
 
     $note = new Note($title, $content);
     $note->save();
